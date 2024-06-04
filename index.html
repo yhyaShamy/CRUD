@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stye.css">
+    <title>CRUD</title>
+</head>
+
+<body>
+
+    <div class="w-75 mx-auto mt-5 d-flex flex-column align-items-center">
+
+        <input type="text" id="productName" class="w-100 py-2 px-3 mb-4" placeholder="Product Name">
+        <input type="number" id="productPrice" class="w-100 py-2 px-3 mb-4" placeholder="Product Price">
+        <input type="text" id="productCategory" class="w-100 py-2 px-3 mb-4" placeholder="Product Category">
+        <textarea id="productDisc" class="w-50 py-2 px-3 mb-4 w-100" rows="3"
+            placeholder="Product Description"></textarea>
+
+        <button onclick="getProduct()" class="btn btn-lg btn-primary w-100 d-block" id="addBtn">add product</button>
+
+        <button class="btn btn-lg btn-info w-100 d-none" onclick="replaceElementArray()" id="updateBtn">update
+            product</button>
+    </div>
+
+    <div class="mt-5 w-75 mx-auto pb-5">
+        <input type="text" oninput="searchItem(this.value)" class="w-75 py-2 px-3 mb-4 mb-5"
+            placeholder="Search For Product Name ...">
+
+        <table class="table  text-center table-responsive-lg">
+            <thead>
+                <th class="text-capitalize h5">name</th>
+                <th class="text-capitalize h5">price</th>
+                <th class="text-capitalize h5">category</th>
+                <th class="text-capitalize h5">description</th>
+                <th class="text-capitalize h5">update</th>
+                <th class="text-capitalize h5">delete</th>
+            </thead>
+
+            <tbody id="tbody" class="border-secondary">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
